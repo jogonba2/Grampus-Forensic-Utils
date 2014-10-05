@@ -24,8 +24,8 @@ class crawlerbing():
 	def __executeAuthentication(self):
 		
 		self.request = urllib2.Request("https://api.datamarket.azure.com/Bing/Search/v1/Composite?Sources=%27web%27&Query=%27"+str(self.search)+"%27&$skip="+str(self.skipValue)+"&$format=json")
-		user = "overxfl0w13"
-		passwd = "pmcQH8sM+j3UidUfgDe28W2qeTW/ddOUz/sL/tUEAT8="
+		user = "youruser"
+		passwd = "yourpasswd"
 		authentication = base64.encodestring("%s:%s" % (user,passwd)).replace("\n","")
 		self.request.add_header("User-Agent","Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1")
 		self.request.add_header("Authorization","Basic %s"%authentication)
